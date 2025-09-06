@@ -1,33 +1,46 @@
-# Synchronous FIFO (Verilog)
+# Memory Project – Synchronous FIFO (Verilog)
 
-## 📌 Overview
-This project implements a **Synchronous FIFO (First In First Out)** memory buffer in Verilog.  
-The design supports configurable depth and width, and includes status signals for **full**, **empty**, **overflow**, **underflow** and **concurrent** conditions.  
-
-A testbench is provided to verify the functionality using simulation.
+### Overview
+A clean and modular Verilog implementation of a **Synchronous FIFO (First-In-First-Out)** buffer. The design ensures reliable data buffering with essential status indicators—**empty**, **full**, **overflow**, **underflow**—and supports parameterized data width and depth.
 
 ---
 
-## 🛠️ Features
-- Parameterized data width and depth
-- Write and Read operations synchronized to clock
-- Status flags:
-  - **Full**
-  - **Empty**
-  - **Overflow**
-  - **Underflow**
-  - **Concurrent**
-- Verified with a testbench and ModelSim simulation
+### Features
+- **Parameterized Width & Depth**: Easily configure FIFO bit-width and storage depth.
+- **Simple Read/Write Interface**: Controlled via `write_enable`, `read_enable` signals.
+- **Status Indicators**: Includes flags for `full`, `empty`, `overflow`, and `underflow`.
+- **Testbench Included**: Provides automated functional verification through a standalone testbench.
+- **Simulation Ready**: Includes a ModelSim/QuestaSim script (`run.do`) for quick simulation setup.
 
 ---
 
-## 📂 Project Structure
+### Directory Structure
 Synchronous_FIFO/
-── src/
-   └── syn_fifo.v          # FIFO RTL
-── tb/
-  └── tb.v                # Testbench
-├── sim/
-  └── run.do              # Simulation script (ModelSim/Questa)
-├── README.md               # Project description
-└── waveform.png            # (Optional) Add a screenshot of simulation results
+├── src/ # RTL source files
+│ └── syn_fifo.v
+├── tb/ # Testbench
+│ └── tb.v
+├── sim/ # Simulation script
+│ └── run.do
+├── waveform.png # (Optional) Simulation waveform image
+└── README.md # Project overview and instructions
+
+
+---
+
+### Getting Started
+
+#### Prerequisites
+- Verilog simulator (ModelSim, QuestaSim, or equivalent)
+- Terminal with access to simulation tool
+
+#### Simulation Steps
+1. Navigate to project root directory.
+2. Launch your simulator and compile RTL + testbench:
+   ```tcl
+   vlog src/syn_fifo.v tb/tb.v
+
+vsim work.tb
+do sim/run.do
+
+
