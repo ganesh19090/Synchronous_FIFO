@@ -17,7 +17,7 @@ A clean and modular Verilog implementation of a **Synchronous FIFO (First-In-Fir
 ### Directory Structure
 Synchronous_FIFO/
 ──>src/ # RTL source files
- └── syn_fifo.v
+ └── syn_fifo.v/n
  
 ──>tb/ # Testbench
  └── tb.v
