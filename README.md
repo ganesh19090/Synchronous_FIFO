@@ -23,11 +23,11 @@ A testbench is provided to verify the functionality using simulation.
 
 ## 📂 Project Structure
 Synchronous_FIFO/
-├── src/
-│   └── syn_fifo.v          # FIFO RTL
-├── tb/
-│   └── tb.v                # Testbench
+── src/
+   └── syn_fifo.v          # FIFO RTL
+── tb/
+  └── tb.v                # Testbench
 ├── sim/
-│   └── run.do              # Simulation script (ModelSim/Questa)
+  └── run.do              # Simulation script (ModelSim/Questa)
 ├── README.md               # Project description
 └── waveform.png            # (Optional) Add a screenshot of simulation results
